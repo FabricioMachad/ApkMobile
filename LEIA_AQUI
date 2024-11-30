@@ -1,2 +1,4 @@
-Professor, tentei rodar no androidStudio não foi, ta dando esse erro aqui Error: Gradle task assembleDebug failed with exit code 1, tentei arruma de várias formas, falhei mizeravelmente, tentei fazer rodar pelo meu celular também, mas não consegui, aparentemente o meu
-notebook ta dando erro quando tento enviar pelo celular, então não consegui testa o database, então ta indo um tiro no escuro, sem saber se ta funcional o banco de dados.
+Professor, tentei rodar no androidStudio não foi, ta dando esse erro aqui Error: Gradle task assembleDebug failed with exit code 1, onde eu tentei mexer no arquivos gradle,
+procurei videos tentando solucionar esse erro, mas não consegui, nem o secretário deu conta desse erro, falhei mizeravelmente, tentei fazer rodar pelo meu celular também, mas não consegui, 
+aparentemente o meu notebook ta dando erro quando tento enviar pelo celular, então não consegui testa o database, então ta indo um tiro no escuro, sem saber se ta funcional o banco de dados.
+
