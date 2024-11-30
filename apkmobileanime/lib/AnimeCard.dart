@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'AnimeDetailScreen.dart';
+import 'AnimeInfo.dart';
 
 class AnimeCard extends StatelessWidget {
   final Map<String, dynamic> anime;
@@ -14,15 +14,15 @@ class AnimeCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => AnimeDetailScreen(anime: anime),
+            builder: (context) => Animeinfo(anime: anime),
           ),
         );
       },
       child: Card(
-        color: Colors.grey[850], // Fundo do card
+        color: Colors.grey[850],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          side: BorderSide(color: Colors.redAccent, width: 2), // Borda destacada
+          side: BorderSide(color: Colors.redAccent, width: 2),
         ),
         margin: EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         child: Column(
@@ -31,9 +31,9 @@ class AnimeCard extends StatelessWidget {
               borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.network(
                 anime['images']['jpg']['large_image_url'],
-                width: double.infinity,   // Largura total do card
-                height: 200,              // Altura da imagem
-                fit: BoxFit.cover,        // Ajuste a imagem sem distorção
+                width: double.infinity,
+                height: 200,
+                fit: BoxFit.cover,
               ),
             ),
             Padding(

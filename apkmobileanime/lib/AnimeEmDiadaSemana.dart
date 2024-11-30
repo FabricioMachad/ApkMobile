@@ -5,12 +5,12 @@ import 'package:http/http.dart' as http;
 
 import 'AnimeCard.dart';
 
-class AnimeSeasonScreen extends StatefulWidget {
+class Animeemdiadasemana extends StatefulWidget {
   @override
-  _AnimeSeasonScreenState createState() => _AnimeSeasonScreenState();
+  _Animeemdiadasemana createState() => _Animeemdiadasemana();
 }
 
-class _AnimeSeasonScreenState extends State<AnimeSeasonScreen> {
+class _Animeemdiadasemana extends State<Animeemdiadasemana> {
   Map<String, List> animeByDay = {
     'Segunda-feira': [],
     'Terça-feira': [],
@@ -58,13 +58,10 @@ class _AnimeSeasonScreenState extends State<AnimeSeasonScreen> {
 
       setState(() {
         animes.forEach((anime) {
-          // Obtém o dia da semana traduzido
           final broadcastDay = _getLocalizedDay(anime['broadcast']?['day']);
           print("Título: ${anime['title']}");
           print("Broadcast: ${anime['broadcast']}");
           print("Dia traduzido: $broadcastDay");
-
-          // Adiciona o anime ao grupo correto
           if (animeByDay.containsKey(broadcastDay)) {
             animeByDay[broadcastDay]?.add(anime);
           } else {
@@ -89,7 +86,7 @@ class _AnimeSeasonScreenState extends State<AnimeSeasonScreen> {
       appBar: AppBar(
         title: Text("Lançamentos da Temporada"),
       ),
-      backgroundColor: Colors.grey[900], // Cor de fundo adicionada
+      backgroundColor: Colors.grey[900],
       body: ListView(
         children: animeByDay.entries.map((entry) {
           final day = entry.key;
@@ -105,7 +102,7 @@ class _AnimeSeasonScreenState extends State<AnimeSeasonScreen> {
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // Texto visível no fundo escuro
+                    color: Colors.white,
                   ),
                 ),
               ),

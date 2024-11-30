@@ -1,7 +1,7 @@
+import 'package:aok_mobile_anime/AnimeEmDiadaSemana.dart';
 import 'package:flutter/material.dart';
 
-import 'AnimeSeasonScreen.dart';
-import "SavedAnimeScreen.dart";
+import "AnimeAcompanhando.dart";
 
 class MainScreen extends StatelessWidget {
   @override
@@ -20,23 +20,22 @@ class MainScreen extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SavedAnimesScreen()),
+                MaterialPageRoute(builder: (context) => Animeacompanhando()),
               );
             },
           ),
         ],
       ),
-      body: AnimeSeasonScreen(), // Exibe diretamente a tela de lançamentos
+      body: Animeemdiadasemana(),
     );
   }
 }
 
-// Função main que inicializa o aplicativo
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),  // Define a tela inicial como a MainScreen
+      home: MainScreen(),
     ),
   );
 }
